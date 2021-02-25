@@ -13,7 +13,6 @@ async def main():
     # You can print all the dialogs/conversations that you are part of:
     async for dialog in client.iter_dialogs():
         print(dialog.name, 'has ID', dialog.id)
-        print('hello')
 
     # await client.send_message(CHAT_TO, 'Hello, from my python code!')
 
