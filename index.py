@@ -4,8 +4,8 @@ from decouple import config
 API_ID = config('API_ID')
 API_HASH = config('API_HASH')
 SESSION_NAME = config('SESSION_NAME')
-CHAT_FROM = config('CHAT_FROM')
-CHAT_TO = config('CHAT_TO')
+CHAT_FROM = int(config('CHAT_FROM'))
+CHAT_TO = int(config('CHAT_TO'))
 
 client = TelegramClient(SESSION_NAME, API_ID, API_HASH)
 
