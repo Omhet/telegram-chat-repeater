@@ -17,13 +17,13 @@ async def main():
     # await client.send_message(CHAT_TO, 'Hello, from my python code!')
 
 
-# @client.on(events.NewMessage(chats=CHAT_FROM))
-# async def my_event_handler(event):
-#     print(event.raw_text)
-#     await client.send_message(CHAT_TO, event.raw_text)
+@client.on(events.NewMessage(chats=CHAT_FROM))
+async def my_event_handler(event):
+    print(event.raw_text)
+    await client.send_message(CHAT_TO, event.raw_text)
 
-# client.start()
-# client.run_until_disconnected()
+client.start()
+client.run_until_disconnected()
 
-with client:
-    client.loop.run_until_complete(main())
+# with client:
+#     client.loop.run_until_complete(main())
