@@ -18,7 +18,6 @@ async def main():
 
 @client.on(events.NewMessage(chats=CHAT_FROM))
 async def my_event_handler(event):
-    print(event.raw_text)
     await client.send_message(CHAT_TO, event.raw_text)
 
 client.start()
